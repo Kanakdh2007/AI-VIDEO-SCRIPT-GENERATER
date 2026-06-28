@@ -30,3 +30,28 @@ This project is an AI-powered web application that generates marketing video scr
 
 ## Project Status
 Work in Progress
+# AI-Powered Video Script Generator
+
+## Project Overview
+This project generates marketing video scripts using AI.
+
+## Workflow
+
+### Epic 1
+- Model Selection
+- Architecture Design
+- Flask Setup
+- Groq API Integration
+
+### Epic 2
+- Hook Generator
+- Script Generator
+- Scene Suggestions
+- CTA Generator
+
+### Technologies
+- Python
+- Flask
+- HTML
+- CSS
+- GitHub
