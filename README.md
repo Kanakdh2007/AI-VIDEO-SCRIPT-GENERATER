@@ -33,7 +33,9 @@ Work in Progress
 # AI-Powered Video Script Generator
 
 ## Project Overview
-This project generates marketing video scripts using AI.
+This project is associated with ai powered video script generator . we will use the existing ai such as llama 3.3 - 70B versatile model to make this .
+
+
 
 ## Workflow
 
