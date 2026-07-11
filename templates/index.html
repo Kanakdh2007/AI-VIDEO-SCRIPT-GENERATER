@@ -1,11 +1,128 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>AI Video Script Generator</title>
+    <title>AI Video Script Generator</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f4f4;
+            margin: 0;
+        }
+
+        header {
+            background: #111;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .container {
+            width: 60%;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .panel {
+            background: white;
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 10px;
+        }
+
+        .title {
+            font-weight: bold;
+        }
+    </style>
 </head>
+
 <body>
 
-<h1>AI-Powered Video Script Generator</h1>
+<header>
+    <h1>AI Video Script Generator</h1>
+</header>
+
+<div class="container">
+
+    <!-- INPUT -->
+    <div class="card">
+        <form method="POST">
+
+            <input type="text" name="product" placeholder="Product Name">
+            <textarea name="description" placeholder="Product Description"></textarea>
+            <input type="text" name="audience" placeholder="Target Audience">
+            <input type="text" name="goal" placeholder="Campaign Goal">
+            <input type="number" name="duration" placeholder="Duration (seconds)">
+
+            <button type="submit">Generate</button>
+
+        </form>
+    </div>
+
+    <!-- OUTPUT -->
+    <div id="results">
+
+        <div class="panel">
+            <div class="title">🔥 Hook</div>
+            <p id="hook">{{ hook }}</p>
+        </div>
+
+        <div class="panel">
+            <div class="title">🎬 Script</div>
+            <pre id="script">{{ script }}</pre>
+        </div>
+
+        <div class="panel">
+            <div class="title">🎥 Scenes</div>
+            <pre id="scenes">{{ scenes }}</pre>
+        </div>
+
+        <div class="panel">
+            <div class="title">🚀 CTA</div>
+            <p id="cta">{{ cta }}</p>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- JAVASCRIPT -->
+<script>
+function copyText(id) {
+    var text = document.getElementById(id).innerText;
+    navigator.clipboard.writeText(text);
+    alert("Copied!");
+}
+
+window.onload = function () {
+    const results = document.getElementById("results");
+    if (results && results.innerText.trim() !== "") {
+        results.scrollIntoView({ behavior: "smooth" });
+    }
+}
+</script>
 
 </body>
 </html>
